@@ -18,7 +18,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "About the Project:\nThis was a personal idea I had:\nI wanted to create a machine learning model that could quickly and accurately identify a face so that I could use it in an application with an identification aspect.\nMy process is as follows:\nFirst, I am building a model that can correctly identify a face without having seen the picture before. Next, I plan to build code that attaches to an application on a smartphone or another smart device."
   },
   {
     "objectID": "posts/Week 2/index.html",
