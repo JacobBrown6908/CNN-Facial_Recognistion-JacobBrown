@@ -1,0 +1,36 @@
+---
+title: "Week 2"
+author: "Jacob Brown"
+date: "2025-01-22"
+categories: [news, code]
+image: "week_2.jpg"
+---
+
+This week, I began gathering data and working on the code for my project. I found a dataset containing pictures of 17 celebrities, with 100 different pictures of each, resulting in 1,700 total images of famous people. I started writing code to process this dataset. Specifically, I created a script that would dynamically pull the names of the folders (each corresponding to a person in the dataset) to identify the celebrities. This approach allows for adding more folders and individuals to the dataset without modifying the code, as long as the folder names match the individuals they represent.
+
+Here’s the code I wrote to generate the target names dynamically:
+```{python}
+for dirname, _, filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname, filename))
+
+path="C:/Users/brown/OneDrive/Documents/Senior project/data/Celebrity Faces Dataset"
+target_names = os.listdir(path)
+target_names
+```
+
+In the process, I learned about the os library, which interacts directly with the operating system. This library allowed me to retrieve the names of folders and files easily.
+
+### Data Augmentation
+
+After setting up the dataset, I implemented augmentations to increase image variations, which helps the model generalize better. I made sure that both the training and testing images had the same augmentations by creating a dynamic function. This approach ensured consistency and reduced the likelihood of user error.
+
+### Neural Network
+
+Next, I started building the neural network. During training, I encountered a significant issue: overfitting. Each image in the dataset was different, so the model struggled to generalize. Additionally, the dataset size was relatively small for training a neural network.
+
+To address this, I made the neural network larger, which helped reduce overfitting. This adjustment improved accuracy and reduced loss, while also increasing validation accuracy and lowering validation loss. However, the validation metrics still showed a large gap: the validation accuracy was around 0.4, and the validation loss was approximately 2.7.
+
+### Plan for Next Week
+
+To further tackle the overfitting issue, I plan to increase the dataset size by duplicating all images three times for each person. This would result in 300 images per person, with each of the 100 original images repeating three times. My goal is to give the model more data to train on, including some similar images, after applying augmentations.
