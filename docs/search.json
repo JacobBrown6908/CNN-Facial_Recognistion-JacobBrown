@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Data Science blog project",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 15, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Week 1-2\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -23,8 +23,8 @@
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "title": "Week 1-2",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "This is an introduction to my facial recognition software that I am building.\nFirst, I started by doing some research on different machine learning models that would be better to use when building this software. Some of the insights I gained were on a CNN (Convolutional Neural Network).\n\nPros\nLearns from raw pixel data. Most smartphones use a CNN for their facial identification software, making it transferable to a smart device.\n\n\nCons\nEasy to overfit the data. Requires large amounts of training data to be effective. Demands significant computing power to train on lots of data. So, I started to look into alternative ML models and was pointed to a few:\n-RNNs\n-CapsNets\n-GANs\nRNNs are mainly used for dynamic inputs, such as video.\nCapsNets are better at handling multiple overlapping objects, making it easier when dealing with different images at various angles with more variation in each photo.\nLastly, GANs are better for image recognition when dealing with augmentation, differing brightness, rotation, zoom, enhancements, and manipulations."
   }
 ]

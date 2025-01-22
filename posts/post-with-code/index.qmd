@@ -1,9 +1,33 @@
 ---
-title: "Post With Code"
-author: "Harlow Malloc"
-date: "2025-01-15"
+title: "Week 1-2"
+author: "Jacob Brown"
+date: "2025-01-22"
 categories: [news, code, analysis]
-image: "image.jpg"
+image: "abstract_face.jpg"
 ---
 
-This is a post with executable code.
+This is an introduction to my facial recognition software that I am building.
+
+First, I started by doing some research on different machine learning models that would be better to use when building this software. Some of the insights I gained were on a CNN (Convolutional Neural Network).
+
+### Pros
+Learns from raw pixel data.
+Most smartphones use a CNN for their facial identification software, making it transferable to a smart device.
+
+### Cons
+Easy to overfit the data.
+Requires large amounts of training data to be effective.
+Demands significant computing power to train on lots of data.
+So, I started to look into alternative ML models and was pointed to a few:
+
+-RNNs
+
+-CapsNets
+
+-GANs
+
+RNNs are mainly used for dynamic inputs, such as video.
+
+CapsNets are better at handling multiple overlapping objects, making it easier when dealing with different images at various angles with more variation in each photo.
+
+Lastly, GANs are better for image recognition when dealing with augmentation, differing brightness, rotation, zoom, enhancements, and manipulations.
