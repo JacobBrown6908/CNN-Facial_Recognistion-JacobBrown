@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tristan O’Malley">
-<meta name="dcterms.date" content="2025-01-12">
+<meta name="author" content="Jacob Brown">
+<meta name="dcterms.date" content="2025-01-22">
 
-<title>Data Science blog project - Welcome To My Blog</title>
+<title>Data Science blog project - Week 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,9 +115,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
+      <h1 class="title">Week 2</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">news</div>
+                <div class="quarto-category">code</div>
               </div>
                   </div>
   </div>
@@ -128,14 +129,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Tristan O’Malley </p>
+               <p>Jacob Brown </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 12, 2025</p>
+        <p class="date">January 22, 2025</p>
       </div>
     </div>
     
@@ -154,11 +155,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<p>This week, I began gathering data and working on the code for my project. I found a dataset containing pictures of 17 celebrities, with 100 different pictures of each, resulting in 1,700 total images of famous people. I started writing code to process this dataset. Specifically, I created a script that would dynamically pull the names of the folders (each corresponding to a person in the dataset) to identify the celebrities. This approach allows for adding more folders and individuals to the dataset without modifying the code, as long as the folder names match the individuals they represent.</p>
+<p>Here’s the code I wrote to generate the target names dynamically:</p>
+<pre><code>for dirname, _, filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname, filename))
+
+path="C:/Users/brown/OneDrive/Documents/Senior project/data/Celebrity Faces Dataset"
+target_names = os.listdir(path)
+target_names</code></pre>
+<p>In the process, I learned about the os library, which interacts directly with the operating system. This library allowed me to retrieve the names of folders and files easily.</p>
+<section id="data-augmentation" class="level3">
+<h3 class="anchored" data-anchor-id="data-augmentation">Data Augmentation</h3>
+<p>After setting up the dataset, I implemented augmentations to increase image variations, which helps the model generalize better. I made sure that both the training and testing images had the same augmentations by creating a dynamic function. This approach ensured consistency and reduced the likelihood of user error.</p>
+</section>
+<section id="neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="neural-network">Neural Network</h3>
+<p>Next, I started building the neural network. During training, I encountered a significant issue: overfitting. Each image in the dataset was different, so the model struggled to generalize. Additionally, the dataset size was relatively small for training a neural network.</p>
+<p>To address this, I made the neural network larger, which helped reduce overfitting. This adjustment improved accuracy and reduced loss, while also increasing validation accuracy and lowering validation loss. However, the validation metrics still showed a large gap: the validation accuracy was around 0.4, and the validation loss was approximately 2.7.</p>
+</section>
+<section id="plan-for-next-week" class="level3">
+<h3 class="anchored" data-anchor-id="plan-for-next-week">Plan for Next Week</h3>
+<p>To further tackle the overfitting issue, I plan to increase the dataset size by duplicating all images three times for each person. This would result in 300 images per person, with each of the 100 original images repeating three times. My goal is to give the model more data to train on, including some similar images, after applying augmentations.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

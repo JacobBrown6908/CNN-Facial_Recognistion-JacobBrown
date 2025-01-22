@@ -9,7 +9,7 @@ image: "week_2.jpg"
 This week, I began gathering data and working on the code for my project. I found a dataset containing pictures of 17 celebrities, with 100 different pictures of each, resulting in 1,700 total images of famous people. I started writing code to process this dataset. Specifically, I created a script that would dynamically pull the names of the folders (each corresponding to a person in the dataset) to identify the celebrities. This approach allows for adding more folders and individuals to the dataset without modifying the code, as long as the folder names match the individuals they represent.
 
 Here’s the code I wrote to generate the target names dynamically:
-```{python}
+```
 for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))

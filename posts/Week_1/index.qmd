@@ -1,8 +1,8 @@
 ---
-title: "Week 1-2"
+title: "Week 1"
 author: "Jacob Brown"
 date: "2025-01-22"
-categories: [news, code, analysis]
+categories: [news, analysis]
 image: "abstract_face.jpg"
 ---
 

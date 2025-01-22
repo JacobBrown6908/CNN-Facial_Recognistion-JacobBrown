@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/Week_1/index.html",
+    "href": "posts/Week_1/index.html",
+    "title": "Week 1",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "This is an introduction to my facial recognition software that I am building.\nFirst, I started by doing some research on different machine learning models that would be better to use when building this software. Some of the insights I gained were on a CNN (Convolutional Neural Network).\n\nPros\nLearns from raw pixel data. Most smartphones use a CNN for their facial identification software, making it transferable to a smart device.\n\n\nCons\nEasy to overfit the data. Requires large amounts of training data to be effective. Demands significant computing power to train on lots of data. So, I started to look into alternative ML models and was pointed to a few:\n-RNNs\n-CapsNets\n-GANs\nRNNs are mainly used for dynamic inputs, such as video.\nCapsNets are better at handling multiple overlapping objects, making it easier when dealing with different images at various angles with more variation in each photo.\nLastly, GANs are better for image recognition when dealing with augmentation, differing brightness, rotation, zoom, enhancements, and manipulations."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Data Science blog project",
     "section": "",
-    "text": "Week 1-2\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Week 2\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 22, 2025\n\n\nJacob Brown\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -21,10 +21,10 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Week 1-2",
+    "objectID": "posts/Week 2/index.html",
+    "href": "posts/Week 2/index.html",
+    "title": "Week 2",
     "section": "",
-    "text": "This is an introduction to my facial recognition software that I am building.\nFirst, I started by doing some research on different machine learning models that would be better to use when building this software. Some of the insights I gained were on a CNN (Convolutional Neural Network).\n\nPros\nLearns from raw pixel data. Most smartphones use a CNN for their facial identification software, making it transferable to a smart device.\n\n\nCons\nEasy to overfit the data. Requires large amounts of training data to be effective. Demands significant computing power to train on lots of data. So, I started to look into alternative ML models and was pointed to a few:\n-RNNs\n-CapsNets\n-GANs\nRNNs are mainly used for dynamic inputs, such as video.\nCapsNets are better at handling multiple overlapping objects, making it easier when dealing with different images at various angles with more variation in each photo.\nLastly, GANs are better for image recognition when dealing with augmentation, differing brightness, rotation, zoom, enhancements, and manipulations."
+    "text": "This week, I began gathering data and working on the code for my project. I found a dataset containing pictures of 17 celebrities, with 100 different pictures of each, resulting in 1,700 total images of famous people. I started writing code to process this dataset. Specifically, I created a script that would dynamically pull the names of the folders (each corresponding to a person in the dataset) to identify the celebrities. This approach allows for adding more folders and individuals to the dataset without modifying the code, as long as the folder names match the individuals they represent.\nHere’s the code I wrote to generate the target names dynamically:\nfor dirname, _, filenames in os.walk('/kaggle/input'):\n    for filename in filenames:\n        print(os.path.join(dirname, filename))\n\npath=\"C:/Users/brown/OneDrive/Documents/Senior project/data/Celebrity Faces Dataset\"\ntarget_names = os.listdir(path)\ntarget_names\nIn the process, I learned about the os library, which interacts directly with the operating system. This library allowed me to retrieve the names of folders and files easily.\n\nData Augmentation\nAfter setting up the dataset, I implemented augmentations to increase image variations, which helps the model generalize better. I made sure that both the training and testing images had the same augmentations by creating a dynamic function. This approach ensured consistency and reduced the likelihood of user error.\n\n\nNeural Network\nNext, I started building the neural network. During training, I encountered a significant issue: overfitting. Each image in the dataset was different, so the model struggled to generalize. Additionally, the dataset size was relatively small for training a neural network.\nTo address this, I made the neural network larger, which helped reduce overfitting. This adjustment improved accuracy and reduced loss, while also increasing validation accuracy and lowering validation loss. However, the validation metrics still showed a large gap: the validation accuracy was around 0.4, and the validation loss was approximately 2.7.\n\n\nPlan for Next Week\nTo further tackle the overfitting issue, I plan to increase the dataset size by duplicating all images three times for each person. This would result in 300 images per person, with each of the 100 original images repeating three times. My goal is to give the model more data to train on, including some similar images, after applying augmentations."
   }
 ]
