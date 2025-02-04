@@ -8,9 +8,9 @@ website:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/JacobBrown6908
+      - icon: linkedin
+        href: www.linkedin.com/in/jacob-brown-9230582aa
 format:
   html:
     theme: cosmo
