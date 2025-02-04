@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/Week_1/index.html",
+    "href": "posts/Week_1/index.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "This is an introduction to my facial recognition software that I am building.\nFirst, I started by doing some research on different machine learning models that would be better to use when building this software. Some of the insights I gained were on a CNN (Convolutional Neural Network).\n\nPros\nLearns from raw pixel data. Most smartphones use a CNN for their facial identification software, making it transferable to a smart device.\n\n\nCons\nEasy to overfit the data. Requires large amounts of training data to be effective. Demands significant computing power to train on lots of data. So, I started to look into alternative ML models and was pointed to a few:\n-RNNs\n-CapsNets\n-GANs\nRNNs are mainly used for dynamic inputs, such as video.\nCapsNets are better at handling multiple overlapping objects, making it easier when dealing with different images at various angles with more variation in each photo.\nLastly, GANs are better for image recognition when dealing with augmentation, differing brightness, rotation, zoom, enhancements, and manipulations."
+  },
+  {
+    "objectID": "posts/Week 2/index.html",
+    "href": "posts/Week 2/index.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "This week, I began gathering data and working on the code for my project. I found a dataset containing pictures of 17 celebrities, with 100 different pictures of each, resulting in 1,700 total images of famous people. I started writing code to process this dataset. Specifically, I created a script that would dynamically pull the names of the folders (each corresponding to a person in the dataset) to identify the celebrities. This approach allows for adding more folders and individuals to the dataset without modifying the code, as long as the folder names match the individuals they represent.\nHere’s the code I wrote to generate the target names dynamically:\nfor dirname, _, filenames in os.walk('/kaggle/input'):\n    for filename in filenames:\n        print(os.path.join(dirname, filename))\n\npath=\"C:/Users/brown/OneDrive/Documents/Senior project/data/Celebrity Faces Dataset\"\ntarget_names = os.listdir(path)\ntarget_names\nIn the process, I learned about the os library, which interacts directly with the operating system. This library allowed me to retrieve the names of folders and files easily.\n\nData Augmentation\nAfter setting up the dataset, I implemented augmentations to increase image variations, which helps the model generalize better. I made sure that both the training and testing images had the same augmentations by creating a dynamic function. This approach ensured consistency and reduced the likelihood of user error.\n\n\nNeural Network\nNext, I started building the neural network. During training, I encountered a significant issue: overfitting. Each image in the dataset was different, so the model struggled to generalize. Additionally, the dataset size was relatively small for training a neural network.\nTo address this, I made the neural network larger, which helped reduce overfitting. This adjustment improved accuracy and reduced loss, while also increasing validation accuracy and lowering validation loss. However, the validation metrics still showed a large gap: the validation accuracy was around 0.4, and the validation loss was approximately 2.7.\n\n\nPlan for Next Week\nTo further tackle the overfitting issue, I plan to increase the dataset size by duplicating all images three times for each person. This would result in 300 images per person, with each of the 100 original images repeating three times. My goal is to give the model more data to train on, including some similar images, after applying augmentations."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About the Project:\nThis was a personal idea I had:\nI wanted to create a machine learning model that could quickly and accurately identify a face so that I could use it in an application with an identification aspect.\nMy process is as follows:\nFirst, I am building a model that can correctly identify a face without having seen the picture before. Next, I plan to build code that attaches to an application on a smartphone or another smart device."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science blog project",
+    "section": "",
+    "text": "Week 3\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nMar 29, 2027\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nJan 19, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nJacob Brown\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Week 3/index.html",
+    "href": "posts/Week 3/index.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "This is my 3rd week of building my model for a facial recognition software. This week, I spent most of the time working on my resume with a Quarto building tool we have been developing. I have been trying to learn how Docker works, but this is something I don’t fully understand, and research has not helped me to reopen my container. However, I hope that I can continue to build up my resume and work on getting it on one page.\nI also worked on transitioning my code to Google Colab so I can save my weights and work on building my model from where I left off. This came with a handful of problems that I was not expecting to encounter. First, I needed to learn more about a new library that helps to connect to my Google Drive. Second, I needed to add a new folder and understand how paths work in Google Drive compared to my local memory. Lastly, I needed to learn how to call weights and where to put code to save weights.\nThis week felt like when I solved one of these issues, I ran into another issue, but I eventually got the code to work, and now I am able to save and call my weights on my Drive.\nHere are a few snippets of code that I was working on this week regarding my code:\ncheckpoint_path = \"/content/drive/My Drive/Senior_Project/check_points/checkpoint_13.weights.h5\"\n\nif os.path.exists(checkpoint_path):\n    print(\"Loading saved weights...\")\n    model.load_weights(checkpoint_path)\nelse:\n    print(\"No saved weights found, training from scratch.\")\ncheckpoint_dir = \"/content/drive/MyDrive/Senior_Project/check_points\"\ncheckpoint_path = os.path.join(checkpoint_dir, \"checkpoint_{epoch:02d}.weights.h5\")  # Save weights\n\n# Ensure the checkpoint directory exists\nif not os.path.exists(checkpoint_dir):\n    os.makedirs(checkpoint_dir)\n\n# Define model checkpoint callback\nmodel_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(\n    filepath=os.path.join(checkpoint_dir, \"checkpoint_{epoch:02d}.weights.h5\"),\n    save_weights_only=True,\n    monitor='val_accuracy',\n    mode='max',\n    save_best_only=True\n)"
+  }
+]
