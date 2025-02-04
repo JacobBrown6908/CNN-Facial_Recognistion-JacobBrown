@@ -6,8 +6,13 @@ categories: [news, code]
 image: "week_3.jpg"
 ---
 
-This is my 3ed week of building my model for a facial recognistion softwear. This week I spent most of the time working on my resume witha Quarto building tool we have been devilping. I have been trying to learn how Docker works but this is somthing I don't fully understnad and research has not helped me to reopen my container. but I hope that I can continue to build up my resume anad work on getting on one page. I also worked on transistioning my code to google colabs so I can save my weights and work on building my model from where I left off. This came with a handful of problems that I was not expecting to encoundter. First, I needed to learn more about a new library that helps to conect to my googole Drive, second I needed to add a new folder and understand how paths work in the google Drive compared to my local memory. and Lastly I needed to learn how to call weights and where to put code to save weights. This week felt like when I solved one of these isues I ran into another isue. but I eventuly got the code to work and now I am able to save and call my weights on my Drive. here are a few snips of code that I was working on this week regarding my code:
+This is my 3rd week of building my model for a facial recognition software. This week, I spent most of the time working on my resume with a Quarto building tool we have been developing. I have been trying to learn how Docker works, but this is something I don't fully understand, and research has not helped me to reopen my container. However, I hope that I can continue to build up my resume and work on getting it on one page.
 
+I also worked on transitioning my code to Google Colab so I can save my weights and work on building my model from where I left off. This came with a handful of problems that I was not expecting to encounter. First, I needed to learn more about a new library that helps to connect to my Google Drive. Second, I needed to add a new folder and understand how paths work in Google Drive compared to my local memory. Lastly, I needed to learn how to call weights and where to put code to save weights.
+
+This week felt like when I solved one of these issues, I ran into another issue, but I eventually got the code to work, and now I am able to save and call my weights on my Drive.
+
+Here are a few snippets of code that I was working on this week regarding my code:
 
 ```
 checkpoint_path = "/content/drive/My Drive/Senior_Project/check_points/checkpoint_13.weights.h5"
