@@ -1,7 +1,7 @@
 ---
 title: "Week 2"
 author: "Jacob Brown"
-date: "2025-01-22"
+date: "2025-01-19"
 categories: [news, code]
 image: "week_2.jpg"
 ---
