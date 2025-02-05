@@ -9,11 +9,10 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/JacobBrown6908
-      - icon: linkedin
-        href: www.linkedin.com/in/jacob-brown-9230582aa
-format:
-  html:
-    theme: cosmo
+      - icon: linkedin JacobBrown
+        href: https://www.linkedin.com/in/jacob-brown-9230582aa
+html:
+    theme: slate
     css: styles.css
 
 

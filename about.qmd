@@ -6,7 +6,7 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: www.linkedin.com/in/jacob-brown-9230582aa
+      href: https://www.linkedin.com/in/jacob-brown-9230582aa
     - icon: github
       text: Github
       href: https://github.com/JacobBrown6908
