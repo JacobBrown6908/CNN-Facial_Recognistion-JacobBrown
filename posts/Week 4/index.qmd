@@ -3,7 +3,7 @@ title: "Week 4"
 author: "Jacob Brown"
 date: "2025-02-2"
 categories: [news, analysis]
-image: ""
+image: "resume_pic.png"
 ---
 
 This week, I primarily focused on refining my resume, both independently and as part of our classwork. We have been exploring the use of a new GitHub repository to create QMD templates specifically designed for Data Science resumes. This has been a valuable experience, as it not only helped me improve my resume but also deepened my understanding of how to structure professional documents using QMD. I feel that dedicating time to this project was a great investment in my career development.
@@ -12,4 +12,3 @@ In addition to working on my resume, I have been actively applying for jobs and 
 
 As a result of this week's work, I will be attaching a finalized version of my resume, which reflects the improvements and insights I have gained throughout this process.
 
-[Download my resume (PDF)](docs/2025%20resume.pdf)
