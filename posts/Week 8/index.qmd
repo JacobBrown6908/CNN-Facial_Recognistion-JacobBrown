@@ -1,0 +1,8 @@
+---
+title: "Week 8"
+author: "Jacob Brown"
+date: "2025-2-2"
+categories: [news, analysis]
+image: ".png"
+---
+

@@ -1,0 +1,36 @@
+---
+title: "Week 5"
+author: "Jacob Brown"
+date: "2025-09-2"
+categories: [news, code]
+image: "week5.jpg"
+---
+
+### Weekly Work
+This week, I worked on improving my code to achieve a better validation loss and validation accuracy. I am currently at around 80% accuracy and validation accuracy, with a validation loss between 0.3 and 0.4. However, I wanted to refine these numbers further, so I added a piece of code that dynamically adjusts the learning rate. If the validation loss gets stuck for more than three epochs, the learning rate decreases by 50%, with a minimum value of 
+1e-8. I am continuing to improve this model and aiming to exceed 90% accuracy.
+
+### Code
+Here is the learning rate scheduler I implemented:
+
+```
+# Define learning rate scheduler
+lr_scheduler = ReduceLROnPlateau(
+    monitor='val_loss',  # Reduce LR based on validation loss
+    factor=0.5,          # Reduce LR by 50% when no improvement
+    patience=3,          # Wait 3 epochs before reducing LR
+    min_lr=1e-8          # Minimum allowed learning rate
+)
+```
+
+This adjustment has improved my model, bringing me closer to my goal of 90% accuracy. Additionally, I added another dense layer and dropout to further enhance model performance:
+```
+  tf.keras.layers.Flatten(),
+  tf.keras.layers.Dropout(0.4),
+  tf.keras.layers.Dense(512, activation=tf.keras.layers.LeakyReLU()),
+  tf.keras.layers.Dropout(0.2),
+  tf.keras.layers.Dense(256, activation=tf.keras.layers.LeakyReLU()),
+  # tf.keras.layers.Dropout(0.2), # remove when using drop out 26
+  # tf.keras.layers.Dense(128, activation=tf.keras.layers.LeakyReLU()), # remove when using drop out 26
+  tf.keras.layers.Dense(17, activation='softmax')
+```

@@ -1,0 +1,15 @@
+---
+title: "Week 6"
+author: "Jacob Brown"
+date: "2025-16-2"
+categories: [news, analysis]
+image: "week6.avif"
+---
+
+### Weekly Work
+
+This week, I was mainly working on finalizing my resume and preparing for job/internship interviews, specifically in AI development or machine learning research. I was able to attend a job fair and set up interviews with a few companies. I also spent some time working on and improving my CNN model. I worked with the larger model that I mentioned last week, but the best accuracy I achieved was around 60%, with a validation loss of about 0.5. Since this was not quite where I wanted my model to be, I decided to switch back at the end of the week.
+
+### ReLU vs LeakyReLU
+
+I also did some research into my model, specifically on activation functions in the neural network section after flattening the images. I looked into LeakyReLU, which is a variation of the ReLU function. One key difference is that when a negative input is given, ReLU returns a 0, whereas LeakyReLU returns a small negative value. This helps prevent neurons from "dying" and improves data flow. LeakyReLU is particularly useful for deeper networks like CNNs, whereas standard ReLU is better suited for general machine learning applications.

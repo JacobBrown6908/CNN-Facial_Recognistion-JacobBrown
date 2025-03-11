@@ -1,0 +1,15 @@
+---
+title: "Week 7"
+author: "Jacob Brown"
+date: "2025-23-2"
+categories: [news, analysis]
+image: "week7.jpg"
+---
+
+### Weekly Work
+
+This week, I mainly focused on job applications, but I also spent some time working on my model. I reverted to my original model size, reducing the 128-layer from my model that we discussed a few weeks ago. I saved my weights and am now trying to recover the scores I achieved a few weeks ago, which were around 80% accuracy.
+
+Additionally, I have been working on a side project within my society. We are building a CNN that analyzes 2D slices of a 3D MRI model of the elbow. Our goal is to detect whether the elbow is injured, and then, if possible, identify cases of PTJC (Post-Traumatic Joint Contracture). PTJC is a condition that affects multiple joints, is unpredictable, and can develop after a joint-related injury. We hope to identify elbows that exhibit signs of PTJC.
+
+For this project, we are using supervised learning to determine whether an elbow is injured and unsupervised learning to detect PTJC. We are also developing an application in Streamlit that will allow users to upload MRI scans. The app will process the scans, extract slices, and determine if the elbow is injured.
