@@ -1,0 +1,11 @@
+---
+title: "Week 8"
+author: "Jacob Brown"
+date: "2025-03-16"
+categories: [news, analysis]
+image: "week10.jpg"
+---
+
+### Weekly Work Update
+
+As I have been working with streamlit I have found it hard to stick with just using Streamlit cloud, so I am trying to intigreate my code into docker, becaseu I want this webpage to be priviate and not on the cloud. But as I have been looking at code in streamlit I found one pice that I realy like.  

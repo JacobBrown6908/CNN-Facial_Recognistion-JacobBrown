@@ -1,0 +1,16 @@
+---
+title: "Week 8"
+author: "Jacob Brown"
+date: "2025-03-9"
+categories: [news, analysis]
+image: "week9.jpg"
+---
+
+### Weekly Work Update
+This week, I’ve been working on building a blind holdout set to test my model against new pictures it hasn't seen before. I’ve also been preparing a poster board for the BYU-Idaho Intellectual Conference. I plan to include a QR code that links to a Streamlit app showcasing my blog, Google Colab projects, and my overall work.
+
+#### Holdout Set
+To minimize the possibility of my model encountering familiar images, I’ve decided to use only photos of celebrities from 2025. Since the dataset was created before 2025, this ensures the model is tested on truly unseen data.
+
+#### Streamlit
+As I build my Streamlit app, I’m starting from scratch and learning along the way. Streamlit is more intuitive and user-friendly than I expected. The coding is relatively straightforward, with intuitive functions, yet the possibilities are vast. I plan to explore various Streamlit projects to gather ideas and inspiration for my own work.

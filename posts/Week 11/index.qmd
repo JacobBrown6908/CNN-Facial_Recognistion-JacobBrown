@@ -1,9 +1,9 @@
 ---
 title: "Week 8"
 author: "Jacob Brown"
-date: "2025-03-2"
+date: "2025-03-23"
 categories: [news, analysis]
-image: "week8.jpg"
+image: "week11.jpg"
 ---
 
 ### Weekly Work Update
