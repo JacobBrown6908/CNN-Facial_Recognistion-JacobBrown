@@ -3,7 +3,7 @@ title: "Week 12"
 author: "Jacob Brown"
 date: "2025-03-30"
 categories: [news, analysis]
-image: "week12.htm"
+image: "week12.jpg"
 ---
 
 ### Weekly Work Update
