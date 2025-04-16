@@ -1,0 +1,15 @@
+---
+title: "Week 12"
+author: "Jacob Brown"
+date: "2025-03-30"
+categories: [news, analysis]
+image: "week12.htm"
+---
+
+### Weekly Work Update
+
+This week I have been building out my webpage, to present the work I've done for the Research and Creative Works Conference at BYU-Idaho. along with this webpage I've built out my poste board, to be mainly big ideas with a few notes and a link to my webpage. 
+
+but my webpage has lots of aspects to my model and what I've learned and completed so far. 
+
+I have descibed the model and some of the step to understanding a CNN, i also have a few section on  

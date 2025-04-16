@@ -2,7 +2,7 @@
   {
     "objectID": "posts/Week 9/index.html",
     "href": "posts/Week 9/index.html",
-    "title": "Week 8",
+    "title": "Week 9",
     "section": "",
     "text": "Weekly Work Update\nThis week, I’ve been working on building a blind holdout set to test my model against new pictures it hasn’t seen before. I’ve also been preparing a poster board for the BYU-Idaho Intellectual Conference. I plan to include a QR code that links to a Streamlit app showcasing my blog, Google Colab projects, and my overall work.\n\nHoldout Set\nTo minimize the possibility of my model encountering familiar images, I’ve decided to use only photos of celebrities from 2025. Since the dataset was created before 2025, this ensures the model is tested on truly unseen data.\n\n\nStreamlit\nAs I build my Streamlit app, I’m starting from scratch and learning along the way. Streamlit is more intuitive and user-friendly than I expected. The coding is relatively straightforward, with intuitive functions, yet the possibilities are vast. I plan to explore various Streamlit projects to gather ideas and inspiration for my own work."
   },
@@ -28,18 +28,25 @@
     "text": "This is my 3rd week of building my model for a facial recognition software. This week, I spent most of the time working on my resume with a Quarto building tool we have been developing. I have been trying to learn how Docker works, but this is something I don’t fully understand, and research has not helped me to reopen my container. However, I hope that I can continue to build up my resume and work on getting it on one page.\nI also worked on transitioning my code to Google Colab so I can save my weights and work on building my model from where I left off. This came with a handful of problems that I was not expecting to encounter. First, I needed to learn more about a new library that helps to connect to my Google Drive. Second, I needed to add a new folder and understand how paths work in Google Drive compared to my local memory. Lastly, I needed to learn how to call weights and where to put code to save weights.\nThis week felt like when I solved one of these issues, I ran into another issue, but I eventually got the code to work, and now I am able to save and call my weights on my Drive.\nHere are a few snippets of code that I was working on this week regarding my code:\ncheckpoint_path = \"/content/drive/My Drive/Senior_Project/check_points/checkpoint_13.weights.h5\"\n\nif os.path.exists(checkpoint_path):\n    print(\"Loading saved weights...\")\n    model.load_weights(checkpoint_path)\nelse:\n    print(\"No saved weights found, training from scratch.\")\ncheckpoint_dir = \"/content/drive/MyDrive/Senior_Project/check_points\"\ncheckpoint_path = os.path.join(checkpoint_dir, \"checkpoint_{epoch:02d}.weights.h5\")  # Save weights\n\n# Ensure the checkpoint directory exists\nif not os.path.exists(checkpoint_dir):\n    os.makedirs(checkpoint_dir)\n\n# Define model checkpoint callback\nmodel_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(\n    filepath=os.path.join(checkpoint_dir, \"checkpoint_{epoch:02d}.weights.h5\"),\n    save_weights_only=True,\n    monitor='val_accuracy',\n    mode='max',\n    save_best_only=True\n)"
   },
   {
-    "objectID": "posts/Week 11/index.html",
-    "href": "posts/Week 11/index.html",
-    "title": "Week 8",
+    "objectID": "posts/Week 12/index.html",
+    "href": "posts/Week 12/index.html",
+    "title": "Week 12",
     "section": "",
-    "text": "Weekly Work Update\nThis week, I was working on job applications and informational interviews. I had an informational interview with a family friend who works for Lockheed Martin at Hill Air Force Base. This is a location where I would like to work, so I was able to connect with her and talk about what she does in software engineering. I also asked her for contacts with others in her field.\nThen, I started working on a website for my poster board. I want to build a Streamlit website to put a QR code on my board and improve the quality of the poster board."
+    "text": "Weekly Work Update\nThis week I have been building out my webpage, to present the work I’ve done for the Research and Creative Works Conference at BYU-Idaho. along with this webpage I’ve built out my poste board, to be mainly big ideas with a few notes and a link to my webpage.\nbut my webpage has lots of aspects to my model and what I’ve learned and completed so far.\nI have descibed the model and some of the step to understanding a CNN, i also have a few section on"
   },
   {
-    "objectID": "posts/Week 1/index.html",
-    "href": "posts/Week 1/index.html",
-    "title": "Week 1",
+    "objectID": "posts/Week 10/index.html",
+    "href": "posts/Week 10/index.html",
+    "title": "Week 10",
     "section": "",
-    "text": "This is an introduction to my facial recognition software that I am building.\nFirst, I started by doing some research on different machine learning models that would be better to use when building this software. Some of the insights I gained were on a CNN (Convolutional Neural Network).\n\nPros\nLearns from raw pixel data. Most smartphones use a CNN for their facial identification software, making it transferable to a smart device.\n\n\nCons\nEasy to overfit the data. Requires large amounts of training data to be effective. Demands significant computing power to train on lots of data. So, I started to look into alternative ML models and was pointed to a few:\n-RNNs\n-CapsNets\n-GANs\nRNNs are mainly used for dynamic inputs, such as video.\nCapsNets are better at handling multiple overlapping objects, making it easier when dealing with different images at various angles with more variation in each photo.\nLastly, GANs are better for image recognition when dealing with augmentation, differing brightness, rotation, zoom, enhancements, and manipulations."
+    "text": "Weekly Work Update\nAs I have been working with streamlit I have found it hard to stick with just using Streamlit cloud, so I am trying to intigreate my code into docker, becaseu I want this webpage to be priviate and not on the cloud. But as I have been looking at code in streamlit I found one pice that I realy like."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science blog project",
+    "section": "",
+    "text": "Week 12\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 30, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 23, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 16, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 9, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 2, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 23, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 2, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nJan 19, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nJacob Brown\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -49,18 +56,18 @@
     "text": "About the Project:\nThis was a personal idea I had:\nI wanted to create a machine learning model that could quickly and accurately identify a face so that I could use it in an application with an identification aspect.\nMy process is as follows:\nFirst, I am building a model that can correctly identify a face without having seen the picture before. Next, I plan to build code that attaches to an application on a smartphone or another smart device."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Science blog project",
+    "objectID": "posts/Week 1/index.html",
+    "href": "posts/Week 1/index.html",
+    "title": "Week 1",
     "section": "",
-    "text": "Week 8\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 23, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 16, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 9, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 2, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 23, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 2, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nJan 29, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\n\nnews\n\n\ncode\n\n\n\n\n\n\n\n\n\nJan 19, 2025\n\n\nJacob Brown\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n\n\n\n\nnews\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 12, 2025\n\n\nJacob Brown\n\n\n\n\n\n\nNo matching items"
+    "text": "This is an introduction to my facial recognition software that I am building.\nFirst, I started by doing some research on different machine learning models that would be better to use when building this software. Some of the insights I gained were on a CNN (Convolutional Neural Network).\n\nPros\nLearns from raw pixel data. Most smartphones use a CNN for their facial identification software, making it transferable to a smart device.\n\n\nCons\nEasy to overfit the data. Requires large amounts of training data to be effective. Demands significant computing power to train on lots of data. So, I started to look into alternative ML models and was pointed to a few:\n-RNNs\n-CapsNets\n-GANs\nRNNs are mainly used for dynamic inputs, such as video.\nCapsNets are better at handling multiple overlapping objects, making it easier when dealing with different images at various angles with more variation in each photo.\nLastly, GANs are better for image recognition when dealing with augmentation, differing brightness, rotation, zoom, enhancements, and manipulations."
   },
   {
-    "objectID": "posts/Week 10/index.html",
-    "href": "posts/Week 10/index.html",
-    "title": "Week 8",
+    "objectID": "posts/Week 11/index.html",
+    "href": "posts/Week 11/index.html",
+    "title": "Week 11",
     "section": "",
-    "text": "Weekly Work Update\nAs I have been working with streamlit I have found it hard to stick with just using Streamlit cloud, so I am trying to intigreate my code into docker, becaseu I want this webpage to be priviate and not on the cloud. But as I have been looking at code in streamlit I found one pice that I realy like."
+    "text": "Weekly Work Update\nThis week, I was working on job applications and informational interviews. I had an informational interview with a family friend who works for Lockheed Martin at Hill Air Force Base. This is a location where I would like to work, so I was able to connect with her and talk about what she does in software engineering. I also asked her for contacts with others in her field.\nThen, I started working on a website for my poster board. I want to build a Streamlit website to put a QR code on my board and improve the quality of the poster board."
   },
   {
     "objectID": "posts/Week 2/index.html",
